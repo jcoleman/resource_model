@@ -236,7 +236,7 @@ class ResourceModel::Base
         end
         validate do
           if self.#{attribute_name}_unconverted_value.present? != self.#{attribute_name}.present?
-            self.errors.add(:#{attribute_name}, 'must be a valid integer')
+            self.errors.add(:#{attribute_name}, :not_an_integer)
           end
         end
       eos
@@ -262,7 +262,7 @@ class ResourceModel::Base
         end
         validate do
           if self.#{attribute_name}_unconverted_value.present? != self.#{attribute_name}.present?
-            self.errors.add(:#{attribute_name}, 'must be a valid decimal')
+            self.errors.add(:#{attribute_name}, :not_a_number)
           end
         end
       eos
@@ -288,7 +288,7 @@ class ResourceModel::Base
         end
         validate do
           if self.#{attribute_name}_unconverted_value.present? != self.#{attribute_name}.present?
-            self.errors.add(:#{attribute_name}, 'must be a valid USD amount')
+            self.errors.add(:#{attribute_name}, :invalid)
           end
         end
       eos
@@ -328,7 +328,7 @@ class ResourceModel::Base
         end
         validate do
           if self.#{attribute_name}_unconverted_value.present? != self.#{attribute_name}.present?
-            self.errors.add(:#{attribute_name}, 'must be a valid date and time')
+            self.errors.add(:#{attribute_name}, :invalid)
           end
         end
       eos
