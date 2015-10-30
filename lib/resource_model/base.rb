@@ -48,7 +48,7 @@ class ResourceModel::Base
 
         validate do
           if self.#{attribute_name} && !self.#{attribute_name}.valid?
-            self.errors.add(:#{attribute_name}, 'must be valid')
+            self.errors.add(:#{attribute_name}, :invalid)
           end
         end
       eos
@@ -99,7 +99,7 @@ class ResourceModel::Base
 
         validate do
           if !self.#{attribute_name}.inject(true) { |valid, model| model.valid? && valid }
-            self.errors.add(:#{attribute_name}, 'must all be valid')
+            self.errors.add(:#{attribute_name}, :invalid)
           end
         end
       eos
