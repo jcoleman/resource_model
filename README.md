@@ -1,6 +1,6 @@
 # ResourceModel
 
-TODO: Write a gem description
+This code was extracted from a real-world project. While you may browse and use the code contained here, there isn't currently good documentation, example code, or any tests. All of these should follow at some point.
 
 ## Installation
 
