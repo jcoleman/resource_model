@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["jtc331@gmail.com"]
   spec.summary       = %q{Smart models to back your resources actions.}
   spec.description   = %q{All of the goodness of ActiveModel (validations, callbacks, etc.) along with declarative typed accessors, JSON serialization, and more.}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/jcoleman/resource_model"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
