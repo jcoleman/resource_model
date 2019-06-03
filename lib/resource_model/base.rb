@@ -503,13 +503,13 @@ class ResourceModel::Base
       hash[attribute_name] = self.send(attribute_name)
     end
     self.class.decimal_attributes.each do |attribute_name|
-      hash[attribute_name] = self.send(attribute_name).andand.to_s
+      hash[attribute_name] = self.send(attribute_name)&.to_s
     end
     self.class.usd_attributes.each do |attribute_name|
-      hash[attribute_name] = self.send(attribute_name).andand.to_s
+      hash[attribute_name] = self.send(attribute_name)&.to_s
     end
     self.class.date_attributes.each do |attribute_name|
-      hash[attribute_name] = self.send(attribute_name).andand.iso8601
+      hash[attribute_name] = self.send(attribute_name)&.iso8601
     end
     self.class.string_attributes.each do |attribute_name|
       hash[attribute_name] = self.send(attribute_name)
